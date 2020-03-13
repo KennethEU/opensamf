@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html class="no-js" lang="da-DK"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Regression med data fra statistikbanken i Excel – OpenSamf</title><link rel="dns-prefetch" href="//platform-api.sharethis.com"><link rel="dns-prefetch" href="//s.w.org"><link rel="stylesheet" id="wp-block-library-css" href="https://kennetheu.github.io/wp-includes/css/dist/block-library/style.min.css" media="all"><link rel="stylesheet" id="font-awesome-css" href="https://kennetheu.github.io/wp-content/plugins/arconix-shortcodes/includes/css/font-awesome.min.css" media="all"><link rel="stylesheet" id="arconix-shortcodes-css" href="https://kennetheu.github.io/wp-content/plugins/arconix-shortcodes/includes/css/arconix-shortcodes.min.css" media="all"><link rel="stylesheet" id="contact-form-7-css" href="https://kennetheu.github.io/wp-content/plugins/contact-form-7/includes/css/styles.css" media="all"><link rel="stylesheet" id="ginger-style-css" href="https://kennetheu.github.io/wp-content/plugins/ginger/front/css/cookies-enabler.css" media="all"><link rel="stylesheet" id="toc-screen-css" href="https://kennetheu.github.io/wp-content/plugins/table-of-contents-plus/screen.min.css" media="all"><link rel="stylesheet" id="twentytwenty-style-css" href="https://kennetheu.github.io/wp-content/themes/twentytwenty/style.css" media="all"><style id="twentytwenty-style-inline-css">
+.color-accent,.color-accent-hover:hover,.color-accent-hover:focus,:root .has-accent-color,.has-drop-cap:not(:focus):first-letter,.wp-block-button.is-style-outline,a { color: #e22658; }blockquote,.border-color-accent,.border-color-accent-hover:hover,.border-color-accent-hover:focus { border-color: #e22658; }button:not(.toggle),.button,.faux-button,.wp-block-button__link,.wp-block-file .wp-block-file__button,input[type="button"],input[type="reset"],input[type="submit"],.bg-accent,.bg-accent-hover:hover,.bg-accent-hover:focus,:root .has-accent-background-color,.comment-reply-link { background-color: #e22658; }.fill-children-accent,.fill-children-accent * { fill: #e22658; }:root .has-background-color,button,.button,.faux-button,.wp-block-button__link,.wp-block-file__button,input[type="button"],input[type="reset"],input[type="submit"],.wp-block-button,.comment-reply-link,.has-background.has-primary-background-color:not(.has-text-color),.has-background.has-primary-background-color *:not(.has-text-color),.has-background.has-accent-background-color:not(.has-text-color),.has-background.has-accent-background-color *:not(.has-text-color) { color: #ffffff; }:root .has-background-background-color { background-color: #ffffff; }body,.entry-title a,:root .has-primary-color { color: #000000; }:root .has-primary-background-color { background-color: #000000; }cite,figcaption,.wp-caption-text,.post-meta,.entry-content .wp-block-archives li,.entry-content .wp-block-categories li,.entry-content .wp-block-latest-posts li,.wp-block-latest-comments__comment-date,.wp-block-latest-posts__post-date,.wp-block-embed figcaption,.wp-block-image figcaption,.wp-block-pullquote cite,.comment-metadata,.comment-respond .comment-notes,.comment-respond .logged-in-as,.pagination .dots,.entry-content hr:not(.has-background),hr.styled-separator,:root .has-secondary-color { color: #6d6d6d; }:root .has-secondary-background-color { background-color: #6d6d6d; }pre,fieldset,input,textarea,table,table *,hr { border-color: #dbdbdb; }caption,code,code,kbd,samp,.wp-block-table.is-style-stripes tbody tr:nth-child(odd),:root .has-subtle-background-background-color { background-color: #dbdbdb; }.wp-block-table.is-style-stripes { border-bottom-color: #dbdbdb; }.wp-block-latest-posts.is-grid li { border-top-color: #dbdbdb; }:root .has-subtle-background-color { color: #dbdbdb; }body:not(.overlay-header) .primary-menu > li > a,body:not(.overlay-header) .primary-menu > li > .icon,.modal-menu a,.footer-menu a, .footer-widgets a,#site-footer .wp-block-button.is-style-outline,.wp-block-pullquote:before,.singular:not(.overlay-header) .entry-header a,.archive-header a,.header-footer-group .color-accent,.header-footer-group .color-accent-hover:hover { color: #d61347; }.social-icons a,#site-footer button:not(.toggle),#site-footer .button,#site-footer .faux-button,#site-footer .wp-block-button__link,#site-footer .wp-block-file__button,#site-footer input[type="button"],#site-footer input[type="reset"],#site-footer input[type="submit"] { background-color: #d61347; }.social-icons a,body:not(.overlay-header) .primary-menu ul,.header-footer-group button,.header-footer-group .button,.header-footer-group .faux-button,.header-footer-group .wp-block-button:not(.is-style-outline) .wp-block-button__link,.header-footer-group .wp-block-file__button,.header-footer-group input[type="button"],.header-footer-group input[type="reset"],.header-footer-group input[type="submit"] { color: #f5efe0; }#site-header,.footer-nav-widgets-wrapper,#site-footer,.menu-modal,.menu-modal-inner,.search-modal-inner,.archive-header,.singular .entry-header,.singular .featured-media:before,.wp-block-pullquote:before { background-color: #f5efe0; }.header-footer-group,body:not(.overlay-header) #site-header .toggle,.menu-modal .toggle { color: #000000; }body:not(.overlay-header) .primary-menu ul { background-color: #000000; }body:not(.overlay-header) .primary-menu > li > ul:after { border-bottom-color: #000000; }body:not(.overlay-header) .primary-menu ul ul:after { border-left-color: #000000; }.site-description,body:not(.overlay-header) .toggle-inner .toggle-text,.widget .post-date,.widget .rss-date,.widget_archive li,.widget_categories li,.widget cite,.widget_pages li,.widget_meta li,.widget_nav_menu li,.powered-by-wordpress,.to-the-top,.singular .entry-header .post-meta,.singular:not(.overlay-header) .entry-header .post-meta a { color: #69603e; }.header-footer-group pre,.header-footer-group fieldset,.header-footer-group input,.header-footer-group textarea,.header-footer-group table,.header-footer-group table *,.footer-nav-widgets-wrapper,#site-footer,.menu-modal nav *,.footer-widgets-outer-wrapper,.footer-top { border-color: #d7cfab; }.header-footer-group table caption,body:not(.overlay-header) .header-inner .toggle-wrapper::before { background-color: #d7cfab; }
+</style><link rel="stylesheet" id="twentytwenty-print-style-css" href="https://kennetheu.github.io/wp-content/themes/twentytwenty/print.css" media="print"><link rel="stylesheet" id="easy_table_style-css" href="https://kennetheu.github.io/wp-content/plugins/easy-table/themes/default/style.css" media="all"><link rel="stylesheet" id="sccss_style-css" href="https://kennetheu.github.io/" media="all"><link rel="stylesheet" id="lightboxStyle-css" href="https://kennetheu.github.io/wp-content/plugins/lightbox-plus/css/fancypants/colorbox.min.css" media="screen"><script src="https://kennetheu.github.io/wp-includes/js/jquery/jquery.js"></script><script src="https://kennetheu.github.io/wp-includes/js/jquery/jquery-migrate.min.js"></script><script src="https://kennetheu.github.io/wp-content/plugins/fd-footnotes/fdfootnotes.js"></script><script src="https://kennetheu.github.io/wp-content/plugins/ginger/addon/analytics/gingeranalytics.min.js"></script><script src="https://kennetheu.github.io/wp-content/plugins/ginger/front/js/cookies-enabler.min.js"></script><script src="https://kennetheu.github.io/wp-content/themes/twentytwenty/assets/js/index.js" async></script><script type="text/javascript">
+        var ginger_logger = "Y";
+        var ginger_logger_url = "https://kennetheu.github.io";
+        var current_url = "https://kennetheu.github.io/regression-med-data-fra-statistikbanken/";
+
+        function gingerAjaxLogTime(status) {
+            var xmlHttp = new XMLHttpRequest();
+            var parameters = "ginger_action=time";
+            var url= ginger_logger_url + "?" + parameters;
+            xmlHttp.open("GET", url, true);
+
+            //Black magic paragraph
+            xmlHttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+
+            xmlHttp.onreadystatechange = function() {
+                if(xmlHttp.readyState == 4 && xmlHttp.status == 200) {
+                    var time = xmlHttp.responseText;
+                    gingerAjaxLogger(time, status);
+                }
+            }
+
+            xmlHttp.send(parameters);
+        }
+
+        function gingerAjaxLogger(ginger_logtime, status) {
+            console.log(ginger_logtime);
+            var xmlHttp = new XMLHttpRequest();
+            var parameters = "ginger_action=log&time=" + ginger_logtime + "&url=" + current_url + "&status=" + status;
+            var url= ginger_logger_url + "?" + parameters;
+            //console.log(url);
+            xmlHttp.open("GET", url, true);
+
+            //Black magic paragraph
+            xmlHttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+
+            xmlHttp.send(parameters);
+        }
+
+    </script><style>
+            .ginger_container.light {
+                        }
+
+                        a.ginger_btn.ginger-accept, a.ginger_btn.ginger-disable, .ginger_btn {
+                background: #dd3333 !important;
+            }
+
+            a.ginger_btn.ginger-accept:hover, a.ginger_btn.ginger-disable:hover, .ginger_btn {
+                background: #dd3333 !important;
+            }
+
+                                    a.ginger_btn {
+                color: #ffffff !important;
+            }
+
+                                            </style><style type="text/css">div#toc_container {width: 100%;}div#toc_container ul li {font-size: 100%;}</style><script>document.documentElement.className = document.documentElement.className.replace( 'no-js', 'js' );</script><style id="custom-background-css">
+body.custom-background { background-color: #ffffff; }
+</style><script>var async_ginger_script = ["\/\/platform-api.sharethis.com\/js\/sharethis.js#product=ga&property=5a723741fb197a0011c58c4d"];</script></head><body class="page-template-default page page-id-1197 custom-background singular enable-search-modal missing-post-thumbnail has-no-pagination not-showing-comments show-avatars footer-top-visible">
+
+		<a class="skip-link screen-reader-text" href="#site-content">Skip to the content</a>
+		<header id="site-header" class="header-footer-group" role="banner"><div class="header-inner section-inner">
+
+				<div class="header-titles-wrapper">
+
+					
+						<button class="toggle search-toggle mobile-search-toggle" data-toggle-target=".search-modal" data-toggle-body-class="showing-search-modal" data-set-focus=".search-modal .search-field" aria-expanded="false">
+							<span class="toggle-inner">
+								<span class="toggle-icon">
+									<svg class="svg-icon" aria-hidden="true" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" width="23" height="23" viewbox="0 0 23 23"><path d="M38.710696,48.0601792 L43,52.3494831 L41.3494831,54 L37.0601792,49.710696 C35.2632422,51.1481185 32.9839107,52.0076499 30.5038249,52.0076499 C24.7027226,52.0076499 20,47.3049272 20,41.5038249 C20,35.7027226 24.7027226,31 30.5038249,31 C36.3049272,31 41.0076499,35.7027226 41.0076499,41.5038249 C41.0076499,43.9839107 40.1481185,46.2632422 38.710696,48.0601792 Z M36.3875844,47.1716785 C37.8030221,45.7026647 38.6734666,43.7048964 38.6734666,41.5038249 C38.6734666,36.9918565 35.0157934,33.3341833 30.5038249,33.3341833 C25.9918565,33.3341833 22.3341833,36.9918565 22.3341833,41.5038249 C22.3341833,46.0157934 25.9918565,49.6734666 30.5038249,49.6734666 C32.7048964,49.6734666 34.7026647,48.8030221 36.1716785,47.3875844 C36.2023931,47.347638 36.2360451,47.3092237 36.2726343,47.2726343 C36.3092237,47.2360451 36.347638,47.2023931 36.3875844,47.1716785 Z" transform="translate(-20 -31)"></path></svg></span>
+								<span class="toggle-text">Search</span>
+							</span>
+						</button>
+
+					
+					<div class="header-titles">
+
+						<div class="site-title faux-heading"><a href="https://kennetheu.github.io/">OpenSamf</a></div>
+					</div>
+
+					<button class="toggle nav-toggle mobile-nav-toggle" data-toggle-target=".menu-modal" data-toggle-body-class="showing-menu-modal" aria-expanded="false" data-set-focus=".close-nav-toggle">
+						<span class="toggle-inner">
+							<span class="toggle-icon">
+								<svg class="svg-icon" aria-hidden="true" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" width="26" height="7" viewbox="0 0 26 7"><path fill-rule="evenodd" d="M332.5,45 C330.567003,45 329,43.4329966 329,41.5 C329,39.5670034 330.567003,38 332.5,38 C334.432997,38 336,39.5670034 336,41.5 C336,43.4329966 334.432997,45 332.5,45 Z M342,45 C340.067003,45 338.5,43.4329966 338.5,41.5 C338.5,39.5670034 340.067003,38 342,38 C343.932997,38 345.5,39.5670034 345.5,41.5 C345.5,43.4329966 343.932997,45 342,45 Z M351.5,45 C349.567003,45 348,43.4329966 348,41.5 C348,39.5670034 349.567003,38 351.5,38 C353.432997,38 355,39.5670034 355,41.5 C355,43.4329966 353.432997,45 351.5,45 Z" transform="translate(-329 -38)"></path></svg></span>
+							<span class="toggle-text">Menu</span>
+						</span>
+					</button>
+
+				</div>
+
+				<div class="header-navigation-wrapper">
+
+					
+							<nav class="primary-menu-wrapper" aria-label="Horizontal" role="navigation"><ul class="primary-menu reset-list-style"><li id="menu-item-410" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu-item-410"><a href="https://kennetheu.github.io/category/artikel/">Blogindlæg</a><span class="icon"></span>
+<ul class="sub-menu"><li id="menu-item-443" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-443"><a href="https://kennetheu.github.io/category/artikel/politik-artikel/">Politik</a></li>
+	<li id="menu-item-444" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-444"><a href="https://kennetheu.github.io/category/artikel/sociologi/">Sociologi</a></li>
+	<li id="menu-item-445" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-445"><a href="https://kennetheu.github.io/category/artikel/velfaerdstat/">Velfærdsstater</a></li>
+	<li id="menu-item-446" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-446"><a href="https://kennetheu.github.io/category/artikel/oekonomi/">Økonomi</a></li>
+	<li id="menu-item-441" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-441"><a href="https://kennetheu.github.io/category/artikel/medier/">Medier</a></li>
+	<li id="menu-item-440" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-440"><a href="https://kennetheu.github.io/category/artikel/ip/">International Politik</a></li>
+	<li id="menu-item-442" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-442"><a href="https://kennetheu.github.io/category/artikel/metode/">Metode</a></li>
+	<li id="menu-item-1192" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-1192"><a href="https://kennetheu.github.io/category/oevelse/">Øvelse</a></li>
+</ul></li>
+<li id="menu-item-1096" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1096"><a href="https://kennetheu.github.io/skriftlig-eksamen/">Skriftlig eksamen i samfundsfag</a></li>
+<li id="menu-item-454" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-454"><a href="https://kennetheu.github.io/din-placering-i-det-politiske-rum/">Dig i det politiske rum</a></li>
+<li id="menu-item-376" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-376"><a href="https://kennetheu.github.io/kontakt/">Kontakt</a></li>
+<li id="menu-item-1288" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-privacy-policy menu-item-1288"><a href="https://kennetheu.github.io/privatlivspolitik/">Privatlivspolitik</a></li>
+
+								</ul></nav><div class="header-toggles hide-no-js">
+
+						
+							<div class="toggle-wrapper search-toggle-wrapper">
+
+								<button class="toggle search-toggle desktop-search-toggle" data-toggle-target=".search-modal" data-toggle-body-class="showing-search-modal" data-set-focus=".search-modal .search-field" aria-expanded="false">
+									<span class="toggle-inner">
+										<svg class="svg-icon" aria-hidden="true" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" width="23" height="23" viewbox="0 0 23 23"><path d="M38.710696,48.0601792 L43,52.3494831 L41.3494831,54 L37.0601792,49.710696 C35.2632422,51.1481185 32.9839107,52.0076499 30.5038249,52.0076499 C24.7027226,52.0076499 20,47.3049272 20,41.5038249 C20,35.7027226 24.7027226,31 30.5038249,31 C36.3049272,31 41.0076499,35.7027226 41.0076499,41.5038249 C41.0076499,43.9839107 40.1481185,46.2632422 38.710696,48.0601792 Z M36.3875844,47.1716785 C37.8030221,45.7026647 38.6734666,43.7048964 38.6734666,41.5038249 C38.6734666,36.9918565 35.0157934,33.3341833 30.5038249,33.3341833 C25.9918565,33.3341833 22.3341833,36.9918565 22.3341833,41.5038249 C22.3341833,46.0157934 25.9918565,49.6734666 30.5038249,49.6734666 C32.7048964,49.6734666 34.7026647,48.8030221 36.1716785,47.3875844 C36.2023931,47.347638 36.2360451,47.3092237 36.2726343,47.2726343 C36.3092237,47.2360451 36.347638,47.2023931 36.3875844,47.1716785 Z" transform="translate(-20 -31)"></path></svg><span class="toggle-text">Search</span>
+									</span>
+								</button>
+
+							</div>
+
+							
+						</div>
+						
+				</div>
+
+			</div>
+
+			<div class="search-modal cover-modal header-footer-group" data-modal-target-string=".search-modal">
+
+	<div class="search-modal-inner modal-inner">
+
+		<div class="section-inner">
+
+			<form role="search" aria-label="Search for:" method="get" class="search-form" action="https://kennetheu.github.io/">
+	<label for="search-form-1">
+		<span class="screen-reader-text">Search for:</span>
+		<input type="search" id="search-form-1" class="search-field" placeholder="Search …" value="" name="s"></label>
+	<input type="submit" class="search-submit" value="Search"></form>
+
+			<button class="toggle search-untoggle close-search-toggle fill-children-current-color" data-toggle-target=".search-modal" data-toggle-body-class="showing-search-modal" data-set-focus=".search-modal .search-field" aria-expanded="false">
+				<span class="screen-reader-text">Close search</span>
+				<svg class="svg-icon" aria-hidden="true" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewbox="0 0 16 16"><polygon fill="" fill-rule="evenodd" points="6.852 7.649 .399 1.195 1.445 .149 7.899 6.602 14.352 .149 15.399 1.195 8.945 7.649 15.399 14.102 14.352 15.149 7.899 8.695 1.445 15.149 .399 14.102"></polygon></svg></button>
+
+		</div>
+
+	</div>
+
+</div>
+
+		</header><div class="menu-modal cover-modal header-footer-group" data-modal-target-string=".menu-modal">
+
+	<div class="menu-modal-inner modal-inner">
+
+		<div class="menu-wrapper section-inner">
+
+			<div class="menu-top">
+
+				<button class="toggle close-nav-toggle fill-children-current-color" data-toggle-target=".menu-modal" data-toggle-body-class="showing-menu-modal" aria-expanded="false" data-set-focus=".menu-modal">
+					<span class="toggle-text">Close Menu</span>
+					<svg class="svg-icon" aria-hidden="true" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewbox="0 0 16 16"><polygon fill="" fill-rule="evenodd" points="6.852 7.649 .399 1.195 1.445 .149 7.899 6.602 14.352 .149 15.399 1.195 8.945 7.649 15.399 14.102 14.352 15.149 7.899 8.695 1.445 15.149 .399 14.102"></polygon></svg></button>
+
+				
+					<nav class="mobile-menu" aria-label="Mobile" role="navigation"><ul class="modal-menu reset-list-style"><li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu-item-410"><div class="ancestor-wrapper"><a href="https://kennetheu.github.io/category/artikel/">Blogindlæg</a><button class="toggle sub-menu-toggle fill-children-current-color" data-toggle-target=".menu-modal .menu-item-410 > .sub-menu" data-toggle-type="slidetoggle" data-toggle-duration="250" aria-expanded="false"><span class="screen-reader-text">Show sub menu</span><svg class="svg-icon" aria-hidden="true" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" width="20" height="12" viewbox="0 0 20 12"><polygon fill="" fill-rule="evenodd" points="1319.899 365.778 1327.678 358 1329.799 360.121 1319.899 370.021 1310 360.121 1312.121 358" transform="translate(-1310 -358)"></polygon></svg></button></div>
+<ul class="sub-menu"><li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-443"><div class="ancestor-wrapper"><a href="https://kennetheu.github.io/category/artikel/politik-artikel/">Politik</a></div></li>
+	<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-444"><div class="ancestor-wrapper"><a href="https://kennetheu.github.io/category/artikel/sociologi/">Sociologi</a></div></li>
+	<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-445"><div class="ancestor-wrapper"><a href="https://kennetheu.github.io/category/artikel/velfaerdstat/">Velfærdsstater</a></div></li>
+	<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-446"><div class="ancestor-wrapper"><a href="https://kennetheu.github.io/category/artikel/oekonomi/">Økonomi</a></div></li>
+	<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-441"><div class="ancestor-wrapper"><a href="https://kennetheu.github.io/category/artikel/medier/">Medier</a></div></li>
+	<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-440"><div class="ancestor-wrapper"><a href="https://kennetheu.github.io/category/artikel/ip/">International Politik</a></div></li>
+	<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-442"><div class="ancestor-wrapper"><a href="https://kennetheu.github.io/category/artikel/metode/">Metode</a></div></li>
+	<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-1192"><div class="ancestor-wrapper"><a href="https://kennetheu.github.io/category/oevelse/">Øvelse</a></div></li>
+</ul></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1096"><div class="ancestor-wrapper"><a href="https://kennetheu.github.io/skriftlig-eksamen/">Skriftlig eksamen i samfundsfag</a></div></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-454"><div class="ancestor-wrapper"><a href="https://kennetheu.github.io/din-placering-i-det-politiske-rum/">Dig i det politiske rum</a></div></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-376"><div class="ancestor-wrapper"><a href="https://kennetheu.github.io/kontakt/">Kontakt</a></div></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-privacy-policy menu-item-1288"><div class="ancestor-wrapper"><a href="https://kennetheu.github.io/privatlivspolitik/">Privatlivspolitik</a></div></li>
+
+						</ul></nav></div>
+
+			<div class="menu-bottom">
+
+				
+			</div>
+
+		</div>
+
+	</div>
+
+</div>
+
+<main id="site-content" role="main"><article class="post-1197 page type-page status-publish hentry" id="post-1197"><header class="entry-header has-text-align-center header-footer-group"><div class="entry-header-inner section-inner medium">
+
+		<h1 class="entry-title">Regression med data fra statistikbanken i Excel</h1>
+	</div>
+
+</header><div class="post-inner thin ">
+
+		<div class="entry-content">
+
+			<div id="toc_container" class="no_bullets"><p class="toc_title">Indholdsfortegnelse</p><ul class="toc_list"><li><a href="#Regression_i_Excel">Regression i Excel</a><ul><li><a href="#Hvad_har_jeg_taenkt_mig_at_undersoege">Hvad har jeg tænkt mig at undersøge?</a></li><li><a href="#0_OBS_i_forhold_til_Excel-versioner">0 OBS i forhold til Excel-versioner</a></li><li><a href="#1_Hente_data_fra_Statistikbanken">1 Hente data fra Statistikbanken</a></li><li><a href="#2_Indsaette_i_Excel">2 Indsætte i Excel</a></li><li><a href="#3_Hente_ledighedsdata_ind_i_Excel">3 Hente ledighedsdata ind i Excel</a></li><li><a href="#4_Fjerne_mellemrum_i_Excel">4 Fjerne mellemrum i Excel</a></li><li><a href="#5_Lave_xy-diagram_og_vaelge_data">5 Lave xy-diagram og vælge data</a></li><li><a href="#6_Tilfoeje_tendenslinje_ligning_og_r2">6 Tilføje tendenslinje, ligning og r2</a></li><li><a href="#7_Tilfoeje_titel_og_aksetitler">7 Tilføje titel og aksetitler</a></li><li><a href="#8_Mindre_akser">8 Mindre akser</a></li><li><a href="#Endelige_diagram_og_regression">Endelige diagram og regression</a></li></ul></li></ul></div>
+<h2><span id="Regression_i_Excel">Regression i Excel</span></h2>
+<p>For elever som skal til skriftlig eksamen i 2020 og senere er det et krav at de kan lave regression i Excel. Her skal I både være i stand til at lave diagrammet, tendenslinjen, ligningen, r2 og give relevante aksetitler.</p>
+<p>Vi skal derfor på denne side se hvordan man selv kan hente data fra Danmarks Statistiks statistikbank. Til eksamen vil I få udleveret en Excel-fil med dataet som I skal bruge til regressionen. Har du allerede data kan du derfor springe ned til afsnit “<a href="#xy-diagram">Lave xy-diagram og vælge data</a>“, hvor vi laver selve diagrammet med regressionen.</p>
+<h3><span id="Hvad_har_jeg_taenkt_mig_at_undersoege">Hvad har jeg tænkt mig at undersøge?</span></h3>
+<p>I dette eksempel har jeg en hypotese om, at der kunne være en sammenhæng mellem ledighed og kriminalitet. Hvor antallet af ledige påvirke antallet af straffelovsovertrædelser. En simpel model af hypotesen:<br><strong>Ledighed (X) –> kriminalitet (Y)</strong></p>
+<p>Det er som sagt kun en hypotese. Så jeg er nødt til at teste den med empiri. Jeg ved helt tilfældigvis at Danmarks Statistik har både data for antallet af ledige og antallet af straffelovsovertrædelser. Så første del af øvelsen er at sammensætte et lille datasæt som vi kan lave regressionen på.</p>
+<h3><span id="0_OBS_i_forhold_til_Excel-versioner">0 OBS i forhold til Excel-versioner</span></h3>
+<p>Der kan være enkelte menupunkter som hedder noget andet i jeres Excel-version. Her må I lige prøve jer lidt frem.</p>
+<h3><span id="1_Hente_data_fra_Statistikbanken">1 Hente data fra Statistikbanken</span></h3>
+<p>I kan finde Statistikbanken på <a href="http://statistikbanken.dk">http://statistikbanken.dk</a></p>
+<p>Nedenstående gennemgang er inddelt i en række mindre animations-gifs som kører i loop. Klik på billederne for at starte vejledningen. Misser man noget så venter man bare til den starter forfra igen.</p>
+<p><a href="https://kennetheu.github.io/video-regression-med-data-fra-statistikbanken-i-excel/">Vil du hente/se det hele som én videofil skal du klikke her.</a> Det kan være en fordel hvis du fx ikke har adgang til denne side under eksamen eller lign.</p>
+<p><a href="https://kennetheu.github.io/wp-content/uploads/2018/04/Statistikbanken-regression01-krimdata.gif" rel="lightbox[1197]" title="1: Hente data fra Statistikbanken"><img class="aligncenter wp-image-1199 size-large" title="1: Hente data fra Statistikbanken" src="https://kennetheu.github.io/wp-content/uploads/2018/04/Statistikbanken-regression01-krimdata-1024x497.gif" alt="" width="660" height="320" srcset="https://kennetheu.github.io/wp-content/uploads/2018/04/Statistikbanken-regression01-krimdata-1024x497.gif 1024w,https://kennetheu.github.io/wp-content/uploads/2018/04/Statistikbanken-regression01-krimdata-300x145.gif 300w,https://kennetheu.github.io/wp-content/uploads/2018/04/Statistikbanken-regression01-krimdata-768x372.gif 768w" sizes="(max-width: 660px) 100vw, 660px"></a></p>
+<h3><span id="2_Indsaette_i_Excel">2 Indsætte i Excel</span></h3>
+<p><a href="https://kennetheu.github.io/wp-content/uploads/2018/04/Statistikbanken-regression02-kopitilexcel.gif" rel="lightbox[1197]" title="2: Indsætte i Excel"><img class="aligncenter wp-image-1202 size-large" title="2: Indsætte i Excel" src="https://kennetheu.github.io/wp-content/uploads/2018/04/Statistikbanken-regression02-kopitilexcel-1024x497.gif" alt="" width="660" height="320" srcset="https://kennetheu.github.io/wp-content/uploads/2018/04/Statistikbanken-regression02-kopitilexcel-1024x497.gif 1024w,https://kennetheu.github.io/wp-content/uploads/2018/04/Statistikbanken-regression02-kopitilexcel-300x145.gif 300w,https://kennetheu.github.io/wp-content/uploads/2018/04/Statistikbanken-regression02-kopitilexcel-768x372.gif 768w" sizes="(max-width: 660px) 100vw, 660px"></a></p>
+<h3><span id="3_Hente_ledighedsdata_ind_i_Excel">3 Hente ledighedsdata ind i Excel</span></h3>
+<p><a href="https://kennetheu.github.io/wp-content/uploads/2018/04/Statistikbanken-regression03-ledigdata.gif" rel="lightbox[1197]" title="3: Hente ledighedsdata ind i Excel"><img class="aligncenter wp-image-1214 size-large" title="3: Hente ledighedsdata ind i Excel" src="https://kennetheu.github.io/wp-content/uploads/2018/04/Statistikbanken-regression03-ledigdata-1024x497.gif" alt="" width="660" height="320" srcset="https://kennetheu.github.io/wp-content/uploads/2018/04/Statistikbanken-regression03-ledigdata-1024x497.gif 1024w,https://kennetheu.github.io/wp-content/uploads/2018/04/Statistikbanken-regression03-ledigdata-300x145.gif 300w,https://kennetheu.github.io/wp-content/uploads/2018/04/Statistikbanken-regression03-ledigdata-768x372.gif 768w" sizes="(max-width: 660px) 100vw, 660px"></a></p>
+<h3><span id="4_Fjerne_mellemrum_i_Excel">4 Fjerne mellemrum i Excel</span></h3>
+<p><a href="https://kennetheu.github.io/wp-content/uploads/2018/04/Statistikbanken-regression04-fjernmellemrum.gif" rel="lightbox[1197]" title="4: Fjerne mellemrum i Excel"><img class="aligncenter wp-image-1215 size-large" title="4: Fjerne mellemrum i Excel" src="https://kennetheu.github.io/wp-content/uploads/2018/04/Statistikbanken-regression04-fjernmellemrum-1024x497.gif" alt="" width="660" height="320" srcset="https://kennetheu.github.io/wp-content/uploads/2018/04/Statistikbanken-regression04-fjernmellemrum-1024x497.gif 1024w,https://kennetheu.github.io/wp-content/uploads/2018/04/Statistikbanken-regression04-fjernmellemrum-300x145.gif 300w,https://kennetheu.github.io/wp-content/uploads/2018/04/Statistikbanken-regression04-fjernmellemrum-768x372.gif 768w" sizes="(max-width: 660px) 100vw, 660px"></a></p>
+<h3><span id="5_Lave_xy-diagram_og_vaelge_data"><a id="xy-diagram"></a>5 Lave xy-diagram og vælge data</span></h3>
+<p>Vær obs på at jeg vælger bruttoledige som X og straffelovsovertrædelserne som Y. Det gør jeg fordi det var den årsagssammenhæng vi introducerede i starten af eksemplet.</p>
+<p><a href="https://kennetheu.github.io/wp-content/uploads/2018/04/Statistikbanken-regression05-diagramdata.gif" rel="lightbox[1197]" title="5: Lave xy-diagram og vælge data"><img class="aligncenter wp-image-1216 size-large" title="5: Lave xy-diagram og vælge data" src="https://kennetheu.github.io/wp-content/uploads/2018/04/Statistikbanken-regression05-diagramdata-1024x497.gif" alt="" width="660" height="320" srcset="https://kennetheu.github.io/wp-content/uploads/2018/04/Statistikbanken-regression05-diagramdata-1024x497.gif 1024w,https://kennetheu.github.io/wp-content/uploads/2018/04/Statistikbanken-regression05-diagramdata-300x145.gif 300w,https://kennetheu.github.io/wp-content/uploads/2018/04/Statistikbanken-regression05-diagramdata-768x372.gif 768w" sizes="(max-width: 660px) 100vw, 660px"></a></p>
+<h3><span id="6_Tilfoeje_tendenslinje_ligning_og_r2">6 Tilføje tendenslinje, ligning og r<sup>2</sup></span></h3>
+<p>Her tilføjer vi essensen af selve regressionen. Tendenslinjen så vi kan tolke på punkternes placering. Ligningen så vi kan tolke på ledighedens effekt på antallet af straffelovsovertrædelser. R<sup>2</sup> for at sige kunne sige noget om sammenhængskraften. <a href="https://kennetheu.github.io/skriftlig-eksamen/#5_Lineaer_regression">Vil du læse mere om hvordan du tolker regressionen, så klik her.</a></p>
+<p><a href="https://kennetheu.github.io/wp-content/uploads/2018/04/Statistikbanken-regression06-tendenslinje.gif" rel="lightbox[1197]" title="6: Tilføje tendenslinje, ligning og r2"><img class="aligncenter wp-image-1217 size-large" title="6: Tilføje tendenslinje, ligning og r2" src="https://kennetheu.github.io/wp-content/uploads/2018/04/Statistikbanken-regression06-tendenslinje-1024x497.gif" alt="" width="660" height="320" srcset="https://kennetheu.github.io/wp-content/uploads/2018/04/Statistikbanken-regression06-tendenslinje-1024x497.gif 1024w,https://kennetheu.github.io/wp-content/uploads/2018/04/Statistikbanken-regression06-tendenslinje-300x145.gif 300w,https://kennetheu.github.io/wp-content/uploads/2018/04/Statistikbanken-regression06-tendenslinje-768x372.gif 768w" sizes="(max-width: 660px) 100vw, 660px"></a></p>
+<h3><span id="7_Tilfoeje_titel_og_aksetitler">7 Tilføje titel og aksetitler</span></h3>
+<p>Her tilføjer vi en titel til diagrammet og nogle aksetitler. Det gør vi for at fortælle hvilken sammenhæng vi undersøger og hvilke variabler vi benytter os af.</p>
+<p><a href="https://kennetheu.github.io/wp-content/uploads/2018/04/Statistikbanken-regression07-aksetitler.gif" rel="lightbox[1197]" title="7: Tilføje titel og aksetitler"><img class="aligncenter wp-image-1219 size-large" title="7: Tilføje titel og aksetitler" src="https://kennetheu.github.io/wp-content/uploads/2018/04/Statistikbanken-regression07-aksetitler-1024x497.gif" alt="" width="660" height="320" srcset="https://kennetheu.github.io/wp-content/uploads/2018/04/Statistikbanken-regression07-aksetitler-1024x497.gif 1024w,https://kennetheu.github.io/wp-content/uploads/2018/04/Statistikbanken-regression07-aksetitler-300x145.gif 300w,https://kennetheu.github.io/wp-content/uploads/2018/04/Statistikbanken-regression07-aksetitler-768x372.gif 768w" sizes="(max-width: 660px) 100vw, 660px"></a></p>
+<h3><span id="8_Mindre_akser">8 Mindre akser</span></h3>
+<p>Vi laver lidt mindre akser, så vi får et pænere diagram. Desuden er det heller ikke relevant at begge akser går helt ned til 0. Det er meget usandsynligt at både ledigheden og antallet af straffelovsovertrædelser er 0.</p>
+<p><a href="https://kennetheu.github.io/wp-content/uploads/2018/04/Statistikbanken-regression08-mindreakser.gif" rel="lightbox[1197]" title="8: Mindre akser"><img class="aligncenter wp-image-1220 size-large" title="8: Mindre akser" src="https://kennetheu.github.io/wp-content/uploads/2018/04/Statistikbanken-regression08-mindreakser-1024x497.gif" alt="" width="660" height="320" srcset="https://kennetheu.github.io/wp-content/uploads/2018/04/Statistikbanken-regression08-mindreakser-1024x497.gif 1024w,https://kennetheu.github.io/wp-content/uploads/2018/04/Statistikbanken-regression08-mindreakser-300x145.gif 300w,https://kennetheu.github.io/wp-content/uploads/2018/04/Statistikbanken-regression08-mindreakser-768x372.gif 768w" sizes="(max-width: 660px) 100vw, 660px"></a></p>
+<h3><span id="Endelige_diagram_og_regression">Endelige diagram og regression</span></h3>
+<p>I det endelig diagram har jeg tilføjet målene for variablerne henholdsvis antal og personer.</p>
+<p><a href="https://kennetheu.github.io/wp-content/uploads/2018/04/Statistikbanken-regression-final.png" rel="lightbox[1197]" title="9: Endelige diagram og regression"><img class="aligncenter wp-image-1221 size-full" title="9: Endelige diagram og regression" src="https://kennetheu.github.io/wp-content/uploads/2018/04/Statistikbanken-regression-final.png" alt="" width="858" height="560" srcset="https://kennetheu.github.io/wp-content/uploads/2018/04/Statistikbanken-regression-final.png 858w,https://kennetheu.github.io/wp-content/uploads/2018/04/Statistikbanken-regression-final-300x196.png 300w,https://kennetheu.github.io/wp-content/uploads/2018/04/Statistikbanken-regression-final-768x501.png 768w" sizes="(max-width: 858px) 100vw, 858px"></a></p>
+<p> </p>
+
+		</div>
+
+	</div>
+
+	<div class="section-inner">
+		
+	</div>
+
+	
+</article></main><div class="footer-nav-widgets-wrapper header-footer-group">
+
+		<div class="footer-inner section-inner">
+
+			
+			
+				<aside class="footer-widgets-outer-wrapper" role="complementary"><div class="footer-widgets-wrapper">
+
+						
+							<div class="footer-widgets column-one grid-item">
+								<div class="widget widget_search"><div class="widget-content"><h2 class="widget-title subheading heading-size-3">Søg på siden</h2><form role="search" method="get" class="search-form" action="https://kennetheu.github.io/">
+	<label for="search-form-2">
+		<span class="screen-reader-text">Search for:</span>
+		<input type="search" id="search-form-2" class="search-field" placeholder="Search …" value="" name="s"></label>
+	<input type="submit" class="search-submit" value="Search"></form>
+</div></div><div class="widget widget_nav_menu"><div class="widget-content"><h2 class="widget-title subheading heading-size-3">Kvantitativ metode</h2><div class="menu-kvantitativ-metode-container"><ul id="menu-kvantitativ-metode" class="menu"><li id="menu-item-747" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-747"><a href="https://kennetheu.github.io/skriftlig-eksamen/">Hjælp til den skriftlige eksamen</a></li>
+<li id="menu-item-735" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-735"><a href="https://kennetheu.github.io/indsamling-af-empiri/">Indsamling af empiri</a>
+<ul class="sub-menu"><li id="menu-item-879" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-879"><a href="https://kennetheu.github.io/google-analyse/">Google Analyse</a></li>
+	<li id="menu-item-732" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-732"><a href="https://kennetheu.github.io/empiri/">Empiri-links</a></li>
+</ul></li>
+<li id="menu-item-655" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-655"><a href="https://kennetheu.github.io/krydstabeller/">Krydstabeller</a></li>
+<li id="menu-item-813" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-813"><a href="https://kennetheu.github.io/lineaer-regression/">Lineær regression</a></li>
+</ul></div></div></div><div class="widget toc_widget"><div class="widget-content"><h2 class="widget-title subheading heading-size-3">Indhold på denne side</h2><ul class="toc_widget_list no_bullets"><li><a href="#Regression_i_Excel">Regression i Excel</a><ul><li><a href="#Hvad_har_jeg_taenkt_mig_at_undersoege">Hvad har jeg tænkt mig at undersøge?</a></li><li><a href="#0_OBS_i_forhold_til_Excel-versioner">0 OBS i forhold til Excel-versioner</a></li><li><a href="#1_Hente_data_fra_Statistikbanken">1 Hente data fra Statistikbanken</a></li><li><a href="#2_Indsaette_i_Excel">2 Indsætte i Excel</a></li><li><a href="#3_Hente_ledighedsdata_ind_i_Excel">3 Hente ledighedsdata ind i Excel</a></li><li><a href="#4_Fjerne_mellemrum_i_Excel">4 Fjerne mellemrum i Excel</a></li><li><a href="#5_Lave_xy-diagram_og_vaelge_data">5 Lave xy-diagram og vælge data</a></li><li><a href="#6_Tilfoeje_tendenslinje_ligning_og_r2">6 Tilføje tendenslinje, ligning og r2</a></li><li><a href="#7_Tilfoeje_titel_og_aksetitler">7 Tilføje titel og aksetitler</a></li><li><a href="#8_Mindre_akser">8 Mindre akser</a></li><li><a href="#Endelige_diagram_og_regression">Endelige diagram og regression</a></li></ul></li></ul></div></div>							</div>
+
+						
+						
+					</div>
+
+				</aside></div>
+
+	</div>
+
+
+			<footer id="site-footer" role="contentinfo" class="header-footer-group"><div class="section-inner">
+
+					<div class="footer-credits">
+
+						<p class="footer-copyright">©
+							2020							<a href="https://kennetheu.github.io/">OpenSamf</a>
+						</p>
+
+						<p class="powered-by-wordpress">
+							<a href="https://wordpress.org/">
+								Powered by WordPress							</a>
+						</p>
+
+					</div>
+
+					<a class="to-the-top" href="#site-header">
+						<span class="to-the-top-long">
+							To the top <span class="arrow" aria-hidden="true">↑</span>						</span>
+						<span class="to-the-top-short">
+							Up <span class="arrow" aria-hidden="true">↑</span>						</span>
+					</a>
+
+				</div>
+
+			</footer><script>
+    jQuery(document).ready(function () {
+		jQuery.post('https://kennetheu.github.io?ga_action=googleanalytics_get_script', {action: 'googleanalytics_get_script'}, function(response) {
+			var s = document.createElement("script");
+			s.type = "text/javascript";
+			s.innerHTML = response;
+			jQuery("head").append(s);
+		});
+    });
+</script><script type="text/javascript">
+jQuery(document).ready(function($){
+  $("a[rel*=lightbox]").colorbox({speed:0,width:false,height:false,innerWidth:false,innerHeight:false,initialWidth:false,initialHeight:false,maxWidth:"90%",maxHeight:"90%",opacity:0.75,current:" {current} af {total}",previous:"Forrige",next:"Næste",close:"Luk",loop:false,scrolling:false,top:false,right:false,bottom:false,left:false});
+});
+</script><script>
+var wpcf7 = {"apiSettings":{"root":"https:\/\/kennetheu.github.io\/wp-json\/contact-form-7\/v1","namespace":"contact-form-7\/v1"}};
+</script><script src="https://kennetheu.github.io/wp-content/plugins/contact-form-7/includes/js/scripts.js"></script><script>
+var tocplus = {"smooth_scroll":"1"};
+</script><script src="https://kennetheu.github.io/wp-content/plugins/table-of-contents-plus/front.min.js"></script><script src="https://kennetheu.github.io/wp-content/plugins/lightbox-plus/js/jquery.colorbox.1.5.9-min.js"></script><script src="https://kennetheu.github.io/wp-content/plugins/lightbox-plus/css/fancypants/helper.min.js"></script><script>
+	/(trident|msie)/i.test(navigator.userAgent)&&document.getElementById&&window.addEventListener&&window.addEventListener("hashchange",function(){var t,e=location.hash.substring(1);/^[A-z0-9_-]+$/.test(e)&&(t=document.getElementById(e))&&(/^(?:a|select|input|button|textarea)$/i.test(t.tagName)||(t.tabIndex=-1),t.focus())},!1);
+	</script><script>
+        COOKIES_ENABLER.init({
+            scriptClass: 'ginger-script',
+            iframeClass: 'ginger-iframe',
+            acceptClass: 'ginger-accept',
+            disableClass: 'ginger-disable',
+            dismissClass: 'ginger-dismiss',
+            bannerClass: 'ginger_banner-wrapper',
+            bannerHTML:
+                document.getElementById('ginger-banner-html') !== null ?
+                    document.getElementById('ginger-banner-html').innerHTML :
+                    '<div class="ginger_banner top light ginger_container ginger_container--open">'
+                                                            + '<a href="#" class="ginger_btn ginger-disable ginger_btn_accept_all">'
+                    + 'Afvis cookies'
+                    + '<\/a>'
+                                        + '<a href="#" class="ginger_btn ginger-accept ginger_btn_accept_all">'
+                    + 'Acceptér cookies'
+                    + '<\/a>'
+                    + '<p class="ginger_message">'
+                    + '<!--googleoff: index-->Opensamf.dk anvender cookies for at tilpasse indhold, funktioner og annoncer og analysere trafikken. Vores partnere kan også anvende cookies til brug for målrettet annoncering. Ved at klikke <strong>Acceptér cookies<\/strong> eller <strong>scrolle videre<\/strong> på siden giver du samtykke til opensamf.dk og tredjeparters anvendelse af cookies. Læs mere på  <a href="https://kennetheu.github.io/privatlivspolitik/">Privatlivspolitik<\/a>.<!--googleon: index-->'
+                    + ''
+                                        + '<\/div>',
+                                    cookieDuration: 365,
+                        eventScroll: true,
+            scrollOffset: 20,
+            clickOutside: true,
+            cookieName: 'ginger-cookie',
+            forceReload: false,
+            iframesPlaceholder: true,
+            iframesPlaceholderClass: 'ginger-iframe-placeholder',
+            iframesPlaceholderHTML:
+                document.getElementById('ginger-iframePlaceholder-html') !== null ?
+                    document.getElementById('ginger-iframePlaceholder-html').innerHTML :
+                    '<p><!--googleoff: index-->This website uses cookies.<!--googleon: index-->'
+                    + '<a href="#" class="ginger_btn ginger-accept">Acceptér cookies'
+                    + '<\/p>'
+        });
+    </script></body></html>
